@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Main Heading -->
+  <h1 class="main-title">LIBRARY MANAGEMENT SYSTEM</h1>
+
+  <!-- Search Section -->
+  <div class="search-section">
+    <input type="text" id="searchBook" placeholder="Search Book">
+    <button onclick="searchBook()">Find</button>
+    <br><br>
+    <input type="text" id="searchFine" placeholder="Fine & Details">
+    <button onclick="searchFine()">Search</button>
+  </div>
+
+  <!-- Issue / Complaint -->
+  <div class="issue-box">
+    <h3>Issue / Complaint / Return</h3>
+    <textarea id="issueDetails" placeholder="Write issue / complaint / return details here..."></textarea>
+    <br>
+    <button onclick="sendIssue()">Send</button>
+  </div>
+
+  <!-- Add Book -->
+  <div class="add-book">
+    <h3>Add Book</h3>
+    <input type="text" id="bookName" placeholder="Book Name">
+    <input type="text" id="authorName" placeholder="Author Name">
+    <input type="number" id="year" placeholder="Published Year">
+    <button onclick="addBook()">Add</button>
+  </div>
+
+  <!-- Book List -->
+  <div class="book-list">
+    <h3>Book Records</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Book Name</th>
+          <th>Author</th>
+          <th>Year</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="bookTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
